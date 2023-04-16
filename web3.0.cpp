@@ -70,8 +70,7 @@ class Car
             int dx = this->x - car2.x;
             int dy = this->y - car2.y;
             int dz = this->z - car2.z;
-            int distance = sqrt(dx * dx + dy * dy + dz * dz);
-            if (distance == 0)
+            if (dx == 0 && dy == 0 && dz == 0)
             { 
                 return true;
             }
