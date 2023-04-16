@@ -27,21 +27,22 @@ class Car
             this->y = y;
             this->z = z;
         }
+        //to increase speed in x axis
         void accelerate_x(int speed_increment)
         {
             this->speed_x += speed_increment;
         }
-
+        //to increase speed in y axis
         void accelerate_y(int speed_increment)
         {
             this->speed_y += speed_increment;
         }
-        
-        void rocket(int fly_speed_increment)
+        //to increase speed in z axis
+        void accelerate_z(int speed_increment)
         {
-            this->speed_z += fly_speed_increment;
+            this->speed_z += speed_increment;
         }
-
+        //to decrease speed of car
         void brake_x(int speed_decrement)
         {
             this->speed_x -= speed_decrement;
@@ -63,6 +64,7 @@ class Car
             this->y += speed_y*time;
             this->z += speed_z*time;
         }
+        //return true if two cars collide otherwise return false
         bool detect_collision(Car car2)
         {
             int dx = this->x - car2.x;
